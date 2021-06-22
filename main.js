@@ -1,4 +1,4 @@
-const socket = io.connect("https://socket-chat-server-test-202106.herokuapp.com/", {transports: ["websocket"],});
+const socket = io.connect("localhost:5500", {transports: ["websocket"],});
 
 $(document).ready(() => {
 
@@ -17,7 +17,7 @@ $(document).ready(() => {
         }
     });
 
-    socket.on("allMessage", function (data) {
+    socket.on("newMessage", function (data) {
         $("#messages").append(`
             <li>
                 ${data.name}：${data.msg}
