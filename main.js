@@ -17,7 +17,7 @@ $(document).ready(() => {
         }
     });
 
-    socket.on("sendMessage", function (data) {
+    socket.on("allMessage", function (data) {
         $("#messages").append(`
             <li>
                 ${data.name}：${data.msg}
