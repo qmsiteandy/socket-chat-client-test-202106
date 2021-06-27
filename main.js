@@ -1,6 +1,6 @@
 // client 與 server 建立連線
-//const socket = io.connect("https://socket-chat-server-test-202106.herokuapp.com/", {transports: ["websocket"],});
-const socket = io.connect("localhost:5500", {transports: ["websocket"],});
+const socket = io.connect("https://socket-chat-server-test-202106.herokuapp.com/", {transports: ["websocket"],});
+//const socket = io.connect("localhost:5500", {transports: ["websocket"],});
 
 socket.emit("joinRoom", "room_channel_1");
 
